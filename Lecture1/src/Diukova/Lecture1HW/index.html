@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture1</title>
+</head>
+<body>
+<h1>FirstPage</h1>
+<hr/>
+<p>Some Text</p>
+<hr/>
+<form action="/handler.php" method=post>
+    <label for="someName">Name</label>
+    <input type="text" id="someName" name="someName"/>
+    <button type="submit">Send</button>
+    <br>
+    <div>
+        <br>
+        <label> TextArea
+            <textarea cols="20" name="someTextArea"></textarea>
+            <button type="submit">Send</button>
+        </label></div>
+</form>
+<hr/>
+<div>
+    <label for="select">Select</label>
+    <select id="select">
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+<div>
+    <br>
+    <label for="multipleSelect">MultipleSelect</label>
+    <select id="multipleSelect" size="3" multiple>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+<hr/>
+<div>
+    <label>Radiobuttons</label>
+    <br>
+    <label for="radio1">
+        <input id="radio1" type="radio" value="1" name="Radio" checked="checked"> One</label>
+    <label for="radio2">
+        <input id="radio2" type="radio" value="2" name="Radio"> Two</label>
+    <label for="radio3">
+        <input id="radio3" type="radio" value="3" name="Radio"> Three</label>
+</div>
+<hr/>
+<div>
+    <label>CheckBox</label>
+    <label for="check1">
+        <input id="check1" type="checkbox" value="1" name="Check" checked="checked"> One</label>
+    <label for="check2">
+        <input id="check2" type="checkbox" value="2" name="Check"> Two</label>
+    <label for="check3">
+        <input id="check3" type="checkbox" value="3" name="Check"> Three</label>
+</div>
+<hr/>
+<div><a href="./SecondPage.html">SecondPage</a></div>
+</body>
+</html>
