@@ -1,0 +1,31 @@
+.for_all {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #FEEED6;
+    color: #6a6767;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 18px;
+   }
+
+.points span {
+    color: #378db2;
+    font-weight: bold;
+   }
+
+#prevPrice{
+    font-weight: normal;
+    color:#6a6767;
+    text-decoration: line-through;
+}
+
+.main_text p {
+    text-align: justify;
+    font-size: 13px;
+    text-indent: 12px;
+    line-height: 1.5;
+    }
