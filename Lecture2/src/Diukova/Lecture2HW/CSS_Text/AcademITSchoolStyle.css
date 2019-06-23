@@ -1,31 +1,44 @@
 .for_all {
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     background-color: #FEEED6;
     color: #6a6767;
+    padding: 5px 5px;
+    line-height: 1.5;
 }
 
 h1 {
     font-weight: lighter;
-    font-size: 25px;
+    font-size: 30px;
     text-transform: uppercase;
-    margin-top: 18px;
-   }
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1;
+}
 
 .points span {
     color: #378db2;
     font-weight: bold;
-   }
+    padding: 10px 5px;
+    line-height: 2;
+}
 
-#prevPrice{
+.for_all [myAttr] {
     font-weight: normal;
-    color:#6a6767;
+    color: #6a6767;
     text-decoration: line-through;
 }
 
 .main_text p {
+    padding: 5px;
     text-align: justify;
-    font-size: 13px;
-    text-indent: 12px;
+    font-size: 16px;
+    text-indent: 18px;
     line-height: 1.5;
-    }
+}
+
+.position {
+    max-width: 757px;
+    margin-right: auto;
+    margin-left: auto;
+}

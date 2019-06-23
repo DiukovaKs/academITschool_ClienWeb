@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L2_Form</title>
+    <link rel="stylesheet" type="text/css" href="Reset.css">
+    <link rel="stylesheet" type="text/css" href="Form_Style.css">
+</head>
+<body>
+<form action="/handler.php" method=post>
+    <div class="form_title">
+        <label>Отправить заявку</label>
+    </div>
+    <table class="table text">
+        <thead>
+        <tr>
+            <th>
+                <div>
+                    <p>
+                        <label myAttr="label">
+                            Ваше имя
+                            <br>
+                            <input type="text" id="user_name" name="user_name" placeholder="Ваше имя *">
+                        </label>
+                    </p>
+                    <p>
+                        <label myAttr="label">
+                            Ваш номер телефона
+                            <br>
+                            <input type="text" id="user_phone" name="user_phone" placeholder="Ваш номер телефона *">
+                        </label>
+                    </p>
+                    <p>
+                        <label myAttr="label">
+                            Ваш e-mail или VK
+                            <br>
+                            <input type="text" id="user_contact" name="user_contact" placeholder="Ваш e-mail или VK *">
+                        </label>
+                    </p>
+                    <p>
+                        <label myAttr="label">
+                            Комментарий
+                            <br>
+                            <textarea cols="50" rows="6" name="text-area"
+                                      placeholder="Комментарий (не обязательно)"></textarea>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру
+                        </label>
+                    </p>
+                    <div class="button">
+                        <button type="submit">
+                            Отправить заявку
+                        </button>
+                    </div>
+                </div>
+            </th>
+        </tr>
+        </thead>
+    </table>
+</form>
+
+</body>
+</html>

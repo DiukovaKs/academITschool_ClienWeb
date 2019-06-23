@@ -6,15 +6,17 @@ th {
     background-color: #3498db;
     color: #ffffff;
     padding: 15px 5px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 td {
-    width: 140px;
+    width: 160px;
     border-collapse: collapse;
     border-bottom: 1px solid #cfcfcf;
     border-left: 1px solid #cfcfcf;
     border-right: 1px solid #cfcfcf;
-    padding: 15px 5px;
+    padding: 18px 12px;
 }
 
 tr:nth-child(odd) {
@@ -22,11 +24,11 @@ tr:nth-child(odd) {
 }
 
 td:nth-child(3n) {
-    width: 260px;
+    width: 300px;
 }
 
 td:nth-child(4n) {
-    width: 160px;
+    width: 180px;
 }
 
 .for_all {
