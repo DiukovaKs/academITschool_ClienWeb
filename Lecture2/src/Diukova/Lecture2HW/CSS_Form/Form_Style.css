@@ -1,38 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.form {
+    max-width: 870px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .form_title {
     font-family: Arial, sans-serif;
     font-size: 30px;
-    padding: 0 10px;
+    padding: 0 -20px;
     color: #6a6767;
-    width: 840px;
+    width: 790px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.text {
+.form .text {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    padding: 24px;
+    padding: 26px;
     margin-top: 3px;
     line-height: 1;
 }
 
-.table {
-    width: 840px;
+.form .table {
+    width: 100%;
     background-color: #FEEED6;
     color: #6a6767;
     text-align: left;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    padding-bottom: 1px;
 }
 
-.table [myAttr] {
-    color: #000000;
+.form .table .label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #676565;
     font-weight: bold;
+    padding-left: 20px;
 }
 
-.button, button {
+.form .button, button {
     width: 177px;
     height: 39px;
     color: #ffffff;
@@ -41,26 +54,40 @@
     font-weight: bold;
     border: 0;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-input {
-    margin-top: 10px;
-    margin-bottom: 25px;
-    width: 823px;
-    padding-left: 12px;
-    padding-top: 11px;
-    padding-bottom: 9px;
+.form button:hover {
+    background-color: #3498db;
+}
+
+.form .table input {
+    box-sizing: border-box;
+    margin: 10px 22px 25px 22px;
+    width: 95%;
+    padding: 11px 12px 9px 12px;
     border: 0;
 }
 
-textarea {
+.form .table textarea {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    width: 823px;
+    width: 95%;
     border: 0;
+    margin: 10px 22px 25px 22px;
     padding-left: 12px;
     padding-top: 11px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+}
+
+.form .like_placeholder {
+    color: #6a6767;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 11px 22px 9px 22px;
+}
+
+.form .table p:first-child {
+    padding-top: 25px;
 }
