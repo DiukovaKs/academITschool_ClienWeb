@@ -2,7 +2,7 @@
     border: 1px solid #cfcfcf;
     background-color: #3498db;
     color: #ffffff;
-    padding: 18px 10px 14px 10px;
+    padding: 16px 10px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -10,7 +10,7 @@
 .table td {
     width: 170px;
     border: 1px solid #cfcfcf;
-    padding: 20px 10px 14px 10px;
+    padding: 16px 10px;
 }
 
 .table tr:nth-child(odd) {
