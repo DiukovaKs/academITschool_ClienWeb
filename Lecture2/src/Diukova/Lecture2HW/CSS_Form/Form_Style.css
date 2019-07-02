@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .form {
     max-width: 870px;
     margin-right: auto;
     margin-left: auto;
-}
+    }
 
 .form_title {
     font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@
     width: 870px;
     margin-left: auto;
     margin-right: auto;
-}
+    }
 
 .form .table {
     width: 100%;
@@ -27,11 +28,12 @@
     margin-right: auto;
     margin-top: 10px;
     padding-bottom: 1px;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
 .form .table p {
     max-width: 850px;
-    margin: 0 22px 0 22px;
 }
 
 .form .table .label {
@@ -41,7 +43,7 @@
     font-weight: bold;
 }
 
-.form .button, button {
+.form .button{
     width: 177px;
     height: 39px;
     color: #ffffff;
@@ -54,7 +56,7 @@
     margin-bottom: 20px;
 }
 
-.form button:hover {
+.form .button:hover {
     background-color: #3498db;
 }
 
