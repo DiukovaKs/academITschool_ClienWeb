@@ -36,8 +36,8 @@ console.log(arrayEvenElementsSumResult);
 
 var bigArray = [];
 
-for (var i = 0; i < 100; ++i) {
-    bigArray.push(i + 1);
+for (var i = 1; i < 100; ++i) {
+    bigArray.push(i);
 }
 
 function getSquareOfArrayEvenElements(array) {
