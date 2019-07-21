@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Reset.css">
+    <link rel="stylesheet" type="text/css" href="Temperatures.css">
+    <script src="Temperatures.js"></script>
+    <title>Temperatures</title>
+</head>
+<body>
+<div class="outerDiv">
+    <div class="h1"><h1>Temperature Converter</h1></div>
+    <div class="innerDiv input"><label class="label">Type temperature in Celsius
+        <input id="inputTemp" type="text"></label></div>
+    <div class="innerDiv radio">
+        <label>
+            <input type="radio" value="1" name="Radio" checked="checked"> Kelvin</label>
+        <label>
+            <input type="radio" value="2" name="Radio"> Fahrenheit</label>
+        <p class="button">
+            <button id="convertButton" type="button">Convert</button>
+        </p>
+    </div>
+    <div class="innerDiv result">
+        <label> Result
+            <textarea id="result"></textarea></label>
+    </div>
+</div>
+</body>
+</html>
