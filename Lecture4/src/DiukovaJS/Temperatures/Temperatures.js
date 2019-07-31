@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var initTemperature = document.getElementById("inputTemp");
     var convertButton = document.getElementById("convertButton");
     var result = document.getElementById("result");
+    result.disabled = true;
+
     var radioButton = document.getElementsByName("Radio");
 
     convertButton.addEventListener("click", function () {
@@ -16,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (radioButton[0].checked) {
             resTemperature = temperature + 273.15;
         } else {
-            resTemperature = temperature * 9 / 5 + 35;
+            resTemperature = temperature * 9 / 5 + 32;
         }
-        return result.textContent = resTemperature;
+        result.textContent = resTemperature;
     });
 
     initTemperature.addEventListener("keydown", function () {
