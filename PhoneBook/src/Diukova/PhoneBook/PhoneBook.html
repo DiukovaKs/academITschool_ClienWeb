@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>PhoneBook</title>
+</head>
+<h1 class="title container">PhoneBook</h1>
+<body>
+<form class="container">
+    <div class="internalDiv form-group">
+        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-6">
+            <input type="text" class="form-control" id="inputName" placeholder="Name">
+        </div>
+    </div>
+    <div class="internalDiv form-group">
+        <label for="inputSurname" class="col-sm-2 col-form-label">Surname</label>
+        <div class="col-6">
+            <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
+        </div>
+    </div>
+    <div class="internalDiv form-group">
+        <label for="inputPhone" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-6">
+            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+        </div>
+    </div>
+    <fieldset class="internalDiv form-group">
+        <div class="col-6">
+            <button type="button" id="addButton" class="btn btn-primary mb-2">Add contact</button>
+        </div>
+    </fieldset>
+</form>
+<div class="table container">
+    <table class="table-striped w-75">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Phone</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody class="tbody">
+        <tr class="emptyRow">
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/popper.js/dist/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="PhoneBook.js"></script>
+</body>
+</html>
