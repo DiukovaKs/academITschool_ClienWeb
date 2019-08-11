@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var initTemperature = document.getElementById("inputTemp");
     var convertButton = document.getElementById("convertButton");
     var result = document.getElementById("result");
-    result.disabled = true;
 
     var radioButton = document.getElementsByName("Radio");
 
