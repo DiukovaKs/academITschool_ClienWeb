@@ -54,20 +54,17 @@ var country3 = {
 };
 
 function getCitiesNumber(countries) {
-    var result = countries.map(function (country, j, countries) {
-        return {countryName: countries[j].countryName, citiesCount: countries[j].cities.length};
-    });
-    result = result.sort(function (a, b) {
-        return b.citiesCount - a.citiesCount;
-    }).filter(function (elem) {
-        return elem.citiesCount === result[0].citiesCount;
+    var result = countries.sort(function (a, b) {
+        return b.cities.length - a.cities.length;
     });
 
-    var finalResult = [];
-    for (var i = 0; i < result.length; ++i) {
-        finalResult.push(result[i].countryName);
-    }
-    return finalResult;
+    result = result.filter(function (elem) {
+        return elem.cities.length === result[0].cities.length
+    }).map(function (result) {
+        return [result.countryName];
+    });
+
+    return result;
 }
 
 var countries = [country1, country2, country3];
