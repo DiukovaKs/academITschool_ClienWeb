@@ -24,28 +24,35 @@ $(document).ready(function () {
         var li = $("<li>");
         li.html("<span class='span'></span><button type='button' class='button'>X</button><button type='button' class='button'>Edit</button >");
 
-        li.children().eq(0).text(newText);
+        var note = li.children().eq(0);
+        note.text(newText);
 
-        li.children().eq(1).click(function () {
+        var removeButton = li.children().eq(1);
+        removeButton.click(function () {
             removeListItem(li)
         });
 
-        li.children().eq(2).click(function () {
+        var editButton = li.children().eq(2);
+        editButton.click(function () {
             var editedLi = $("<li>");
             editedLi.html("<input type='text'><button type='button' class='button'>X</button><button type='button' class='button'>cancel</button><button type='button' class='button'>save</button >");
-            editedLi.children().eq(0).val(newText);
+            var editNote = editedLi.children().eq(0);
+            editNote.val(newText);
             li.before(editedLi);
             li.hide();
 
-            editedLi.children().eq(1).click(function () {
+            var editRemoveButton = editedLi.children().eq(1);
+            editRemoveButton.click(function () {
                 removeListItem(editedLi);
             });
 
-            editedLi.children().eq(2).click(function () {
+            var editCancelButton = editedLi.children().eq(2);
+            editCancelButton.click(function () {
                 showListItem(editedLi, li);
             });
 
-            editedLi.children().eq(3).click(function () {
+            var editSaveButton = editedLi.children().eq(3);
+            editSaveButton.click(function () {
                 newText = editedLi.children().eq(0).val();
                 if (newText === "") {
                     removeListItem(editedLi);
