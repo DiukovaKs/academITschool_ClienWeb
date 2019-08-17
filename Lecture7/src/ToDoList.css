@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.button {
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.div {
+    margin-left: 30px;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-left: 40px;
+    font-family: sans-serif, Arial;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.span {
+    margin-top: 10px;
+    font-family: sans-serif, Arial;
+    padding-right: 20px;
+}
+
+.toDoList {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border: 1px;
+}
+
+.validationMessage {
+    color: red;
+    font-family: sans-serif, Arial;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.span::before {
+    content: "⚫";
+    font-size: 10px;
+    padding-right: 10px;
+}
+
+[v-cloak]{
+    display:none;
+}

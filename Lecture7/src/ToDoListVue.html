@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Reset.css">
+    <link rel="stylesheet" type="text/css" href="ToDoList.css">
+    <title>ToDoListVue</title>
+</head>
+<body>
+<div id="toDoListVue">
+    <h1>ToDo List Vue</h1>
+
+    <div class="div"><label>
+        <input id="textArea" type="text" v-model="newText" :class="{isInvalid}"/></label>
+        <button id="addButton" type="button" @click="addNote" class="button">Add</button>
+        <div v-cloak v-if="isInvalid" class="validationMessage"> Type text!</div>
+    </div>
+
+    <ul class="toDoList" v-cloak>
+        <add-note v-bind:item="item"
+                  v-for="item in items"
+                  v-on:remove="removeNote"
+                  v-on:edit="editNote"
+                  :is="curr">
+        </add-note>
+
+        <edit-note
+              v-bind:item="item"
+              v-on:remove="removeNote"
+              :is="curr">
+        </edit-note>
+
+    </ul>
+</div>
+
+<script id="templ" type="text/x-template">
+    <li><span v-text="item.text" class="span"></span>
+        <button @click="remove" class="button">X</button>
+        <button @click="edit" class="button">Edit</button>
+    </li>
+</script>
+
+<script id="templ2" type="text/x-template">
+    <li><input type="text" placeholder="ghdgh">
+        <button @clik="remove" class="button">X</button>
+        <button @clik="cancel" class="button">Cancel</button>
+        <button @clik="save" class="button">Save</button>
+    </li>
+</script>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="ToDoListVue.js"></script>
+</body>
+</html>
