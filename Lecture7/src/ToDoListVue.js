@@ -1,18 +1,27 @@
-
 Vue.component("add-note", {
-    props: ["item"],
+    props: {
+        item: {
+            text:String,
+            isEditing:Boolean
+        },
+        newText: Object,
+        newTextEdit: Object
+    },
     template: "#templ",
     methods: {
         remove: function () {
-            this.$emit("remove", this.item)
+            this.$emit("remove", this.item);
         },
-        edit:function () {
+        edit: function () {
             this.$emit("edit", this.item);
+        },
+        save: function () {
+            this.$emit("save", this.item);
         }
     }
 });
 
-Vue.component("edit-note", {
+/*Vue.component("edit-note", {
     props: ["item"],
     template: "#templ2",
     newTextEdited: "1235",
@@ -27,15 +36,21 @@ Vue.component("edit-note", {
             //todo
         }
     }
-});
+});*/
 
 new Vue({
     el: "#toDoListVue",
-        data: {
-        curr: "add-note",
-        items: [],
+    data: {
+        //curr: 1,
+        items: [
+            {
+                text: "",
+                isEditing: false
+            }
+        ],
         newText: "",
-        isInvalid: false
+        isInvalid: false,
+        newTextEdit: ""
     },
     methods: {
         addNote: function () {
@@ -55,15 +70,34 @@ new Vue({
             });
         },
         editNote: function (item) {
-            item.curr = "edit";
-           /** this.items = this.items.filter(function (x) {
-                return x !== item;
-            });*/
+            //this.curr = 2;
+            this.newTextEdit = item.text;
+            this.items = this.items.map(function (elem) {
+                if (elem.text === item.text){
+                    elem.isEditing = !elem.isEditing
+                }
+                return elem;
+            });
 
         },
-        cancel: function () {
-            //todo
-        }
+        cancel: function (item) {
+            this.items = this.items.map(function (elem) {
+                if (elem.text === item.text){
+                    elem.isEditing = !elem.isEditing
+                }
+                return elem;
+            });
+        },
+        addEditedNote: function (item) {
+            this.items = this.items.map(function (elem) {
+                if (elem.text === item.text){
+                    elem.isEditing = elem.isEditing
+                    elem.text = this.newTextEdit;
+                }
+                return elem;
+            });
+
+        },
     }
 })
 ;

@@ -17,34 +17,39 @@
     </div>
 
     <ul class="toDoList" v-cloak>
-        <add-note v-bind:item="item"
-                  v-for="item in items"
-                  v-on:remove="removeNote"
-                  v-on:edit="editNote"
-                  :is="curr">
+        <add-note
+                v-bind:item="item"
+                v-for="item in items"
+                v-on:remove="removeNote"
+                v-on:edit="editNote"
+                v-on:save="addEditedNote"
+                :isEditing="item.isEditing"
+                :text="item.text"
+               >
         </add-note>
 
-        <edit-note
-              v-bind:item="item"
-              v-on:remove="removeNote"
-              :is="curr">
-        </edit-note>
 
     </ul>
 </div>
 
 <script id="templ" type="text/x-template">
-    <li><span v-text="item.text" class="span"></span>
-        <button @click="remove" class="button">X</button>
-        <button @click="edit" class="button">Edit</button>
+    <li>
+        <div v-if="item.isEditing">
+            <input id="newText" type="text" v-model="newTextEdited">
+            <button @click="remove" class="button">X</button>
+            <button @click="cancel" class="button">Cancel</button>
+            <button @click="save" class="button">Save</button>
+        </div>
+        <div v-else ><span v-text="item.text" class="span"></span>
+            <button @click="remove" class="button">X</button>
+            <button @click="edit(item)" class="button">Edit</button>
+        </div>
+
     </li>
 </script>
 
 <script id="templ2" type="text/x-template">
-    <li><input type="text" placeholder="ghdgh">
-        <button @clik="remove" class="button">X</button>
-        <button @clik="cancel" class="button">Cancel</button>
-        <button @clik="save" class="button">Save</button>
+    <li>
     </li>
 </script>
 
