@@ -1,0 +1,73 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    {% verbatim %}
+<h1 class="title container">PhoneBook</h1>
+<body>
+<div id="phoneBookVue">
+    <form class="container">
+        <div class="internalDiv form-group">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <span v-if="isInvalidName" class="text-danger">Fill Name!</span>
+            <div class="col-6">
+                <input v-model="newName" type="text" class="form-control" id="inputName" placeholder="Name"
+                       v-bind:class="{'form-control is-invalid':isInvalidName}"></div>
+        </div>
+        <div class="internalDiv form-group">
+            <label for="inputSurname" class="col-sm-2 col-form-label">Surname</label>
+            <span v-if="isInvalidSurname" class="text-danger">Fill Surname!</span>
+            <div class="col-6">
+                <input v-model="newSurname" type="text" class="form-control" id="inputSurname" placeholder="Surname"
+                       v-bind:class="{'form-control is-invalid':isInvalidSurname}">
+            </div>
+        </div>
+        <div class="internalDiv form-group">
+            <label for="inputPhone" class="col-sm-2 col-form-label">Phone</label>
+            <span v-if="isInvalidPhone" class="text-danger">Fill Phone Number correct!</span>
+            <div class="col-6">
+                <input v-model="newPhoneNumber" type="text" class="form-control" id="inputPhone" placeholder="Phone"
+                       v-bind:class="{'form-control is-invalid':isInvalidPhone}">
+            </div>
+        </div>
+        <fieldset class="internalDiv form-group">
+            <div class="col-6">
+                <button @click="addContact" type="button" id="addButton" class="btn btn-primary mb-2">Add contact
+                </button>
+            </div>
+        </fieldset>
+
+        <div class="form-inline">
+            <label class="mr-2">Search</label>
+            <input v-model="term" type="text" class="mb-4 mr-2 form-control">
+            <button @click="search" type="button" id="addButton" class="btn btn-primary mb-2">Search
+                </button>
+            </div>
+    </form>
+
+    <div class="table container">
+        <table class="table-striped w-75">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Phone</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody class="tbody">
+            <tr v-cloak v-for="(contact,index) in contacts" class="emptyRow">
+                <th scope="row" v-text="index + 1"></th>
+                <td v-text="contact.name"></td>
+                <td v-text="contact.surname"></td>
+                <td v-text="contact.phoneNumber"></td>
+                <td>
+                    <button type="button" @click="removeContact(contact)">X</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endverbatim %}
+{% endblock %}
